@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
  
    if($name == 'admin')
    {
-       if($password == '12345')
+       if($password == '*****')
        {
            echo "Login Successfully";
        header('location: dashboard.php');
