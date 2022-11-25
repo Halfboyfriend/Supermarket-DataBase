@@ -3,6 +3,10 @@
 $conn = mysqli_connect("localhost", "root", "");
 $db = mysqli_select_db($conn, 'dollarstore');
 
+// $conn = mysqli_connect("sql302.epizy.com", "epiz_32985823", "YEoEBPjSGC");
+// $db = mysqli_select_db($conn, 'epiz_32985823_dollarstore');
+
+
 if(isset($_POST['deletedata']))
 {
     $id = $_POST['delete'];
@@ -16,7 +20,7 @@ if(isset($_POST['deletedata']))
 
         echo "<script>
         alert('$message');
-        window.location.href='index.php';
+        window.location.href='dashboard.php';
         </script>";
     }
     else{

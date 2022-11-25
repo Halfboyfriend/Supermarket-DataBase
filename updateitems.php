@@ -7,21 +7,25 @@ $db = mysqli_select_db($conn, 'dollarstore');
         $id = $_POST['id'];
 
         $itname = $_POST['itname'];
+        $price = $_POST['price'];
         $tsupply = $_POST['tsupply'];
         $tsold = $_POST['tsold'];
         $tavail = $_POST['tavail'];
 
-        $query = "UPDATE StoreItems SET itname='$itname', tsupply='$tsupply', tsold = '$tsold', tavail = '$tavail' WHERE id='$id' ";
+
+        $var = $tsupply - $tsold;
+        
+        $query = "UPDATE StoreItems SET itname='$itname',price='$price', tsupply='$tsupply', tsold = '$tsold', tavail = '$var' WHERE id='$id' ";
 
         $query_run = mysqli_query($conn, $query);
 
         if($query_run)
         {
             $message = "<h3>Data Updated Successfully...</h3>";
-
+           
             echo "<script>
             alert('$message');
-            window.location.href='index.php';
+            window.location.href='dashboard.php';
             </script>";
         }
         else{

@@ -1,0 +1,8 @@
+<?php
+
+//SQL NOTES
+SELECT * FROM table_name;
+
+
+
+?>

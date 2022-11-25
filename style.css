@@ -1,0 +1,45 @@
+body::before{
+    display: block;
+    content: "";
+    height: 75px;;
+}
+footer{
+    
+    background-color: #fff;
+}
+#foot_content input{
+    border-radius: 50px;
+    padding: 12px 20px;
+    border: 1px solid #000;
+}
+#foot_content #img{
+    background-color: red;
+    color: #fff;
+    border: 1px solid red;
+    cursor: pointer;
+}
+#foot_txt{
+    text-align: center;
+    font-family: Arial;
+}
+#foot_content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+ul li{
+    list-style: none;
+}
+
+@media screen and (max-width: 700px) {
+    
+    #foot_content{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    #foot_img{
+        display: none;
+    }
+   
+}
